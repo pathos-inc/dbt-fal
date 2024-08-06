@@ -1,5 +1,6 @@
 from typing import Any, Dict
-from dbt.adapters.base import BaseAdapter, Credentials
+from dbt.adapters.base import BaseAdapter
+from dbt.adapters.contracts.connection import Credentials
 from trino.sqlalchemy import URL
 from dbt.adapters.trino.connections import TrinoCredentials
 import sqlalchemy
