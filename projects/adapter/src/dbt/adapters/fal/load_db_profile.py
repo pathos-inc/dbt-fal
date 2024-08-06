@@ -65,7 +65,7 @@ def load_profiles_info_1_5() -> Tuple[Profile, Dict[str, Any]]:
             profile_name=profile_name,
             renderer=profile_renderer,
             # TODO: should we load the user_config?
-            user_config={},
+            # user_config={},
             target_override=db_profile_target_name,
         )
     except RecursionError as error:
