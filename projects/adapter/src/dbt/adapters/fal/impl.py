@@ -84,7 +84,7 @@ class FalEncAdapter(BaseAdapter):
         with _release_plugin_lock():
             # Temporary credentials for register
             config.credentials = config.sql_adapter_credentials
-            FACTORY.register_adapter(config)
+            FACTORY.register_adapter(config, mp_context)
             config.credentials = FalCredentialsWrapper(config.sql_adapter_credentials)
 
         return FalEncAdapterWrapper(db_adapter_class, config)
