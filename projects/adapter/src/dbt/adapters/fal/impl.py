@@ -1,4 +1,5 @@
 from typing import Optional
+from multiprocessing.context import SpawnContext
 
 from collections import defaultdict
 from contextlib import contextmanager
@@ -46,7 +47,7 @@ class FalEncAdapter(BaseAdapter):
     # TODO: how do we actually use this?
     AdapterSpecificConfigs = FalConfigs
 
-    def __new__(cls, config):
+    def __new__(cls, config, mp_context: SpawnContext):
         # There are two different credentials types which can be passed to FalEncAdapter
         # 1. FalEncCredentials
         # 2. FalCredentialsWrapper
@@ -83,7 +84,7 @@ class FalEncAdapter(BaseAdapter):
         with _release_plugin_lock():
             # Temporary credentials for register
             config.credentials = config.sql_adapter_credentials
-            FACTORY.register_adapter(config)
+            FACTORY.register_adapter(config, mp_context)
             config.credentials = FalCredentialsWrapper(config.sql_adapter_credentials)
 
         return FalEncAdapterWrapper(db_adapter_class, config)
