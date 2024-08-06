@@ -4004,7 +4004,7 @@ asn1crypto = ">=1.5.1"
 name = "setuptools"
 version = "72.1.0"
 description = "Easily download, build, install, upgrade, and uninstall Python packages"
-optional = true
+optional = false
 python-versions = ">=3.8"
 files = [
     {file = "setuptools-72.1.0-py3-none-any.whl", hash = "sha256:5a03e1860cf56bb6ef48ce186b0e557fdba433237481a9a625176c2831be15d1"},
@@ -4639,4 +4639,4 @@ trino = ["trino"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.8"
-content-hash = "4a2c9ad42ba98a5d46fb046d3ac9ca7e969ae1c2396cc411f6dd90f3e3f6d4b1"
+content-hash = "b1bf5956153d22a2ac9a630919e7d2073f7240ce5892c1947bb3bd9626ada866"

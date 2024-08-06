@@ -71,6 +71,7 @@ s3fs = { version = ">=2022.8.2", optional = true }
 packaging = ">=23"
 fal = "^0.10.0"
 importlib-metadata = "^6.0.0"
+setuptools = "^72.1.0"
 
 [tool.poetry.extras]
 postgres = []

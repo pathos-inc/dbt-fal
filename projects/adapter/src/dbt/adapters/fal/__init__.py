@@ -1,4 +1,4 @@
-from dbt.adapters.base import AdapterPlugin
+from dbt.adapters.base.plugin import AdapterPlugin
 
 from dbt.adapters.fal.connections import FalEncCredentials
 from dbt.include import fal

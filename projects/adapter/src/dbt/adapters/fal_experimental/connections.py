@@ -3,7 +3,7 @@ from typing import Optional
 import os
 
 from dbt.adapters.contracts.connection import Credentials
-from dbt.dataclass_schema import StrEnum, ExtensibleDbtClassMixin
+from dbt_common.dataclass_schema import StrEnum, ExtensibleDbtClassMixin
 
 from dbt.fal.adapters.python import PythonConnectionManager
 
